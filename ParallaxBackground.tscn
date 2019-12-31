@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Textures/Background.png" type="Texture" id=1]
+[ext_resource path="res://Textures/Extension_blue.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Extension_green.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Middleground.png" type="Texture" id=4]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+editor/display_folded = true
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." index="0"]
+
+editor/display_folded = true
+motion_scale = Vector2( 0.2, 0.2 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer" index="0"]
+
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 5076, 215 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Sprite2" type="Sprite" parent="ParallaxLayer" index="1"]
+
+position = Vector2( 0, -2144 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 5076, 2150 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="." index="1"]
+
+motion_scale = Vector2( 0.4, 0.4 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite2" type="Sprite" parent="ParallaxLayer2" index="0"]
+
+position = Vector2( 0, 192 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 5076, 2150 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer2" index="1"]
+
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 5076, 220 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+
